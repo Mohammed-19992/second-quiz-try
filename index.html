@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="firstPage">
+        <h1>Dear Student, Welcome to this Code Quiz</h1>
+        <div id="form1">
+        <form>
+        <h4>This is a quiz that consists of 4 multiple choice questions. If one question is answered incorrectly, you will lose 10 seconds from the timer shown beside the questions form.</h4>
+        </form>
+        </div>
+        <h2>Click Below to Start the Quiz</h2>
+        <button id="start" href=>Start!</button>
+    </div>
+    <div id="mainQuiz">
+
+        <div class="row" id="questions">
+            <div class="col"></div>
+            <div class="col">
+                <div id="question">Question goes here</div>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id=answer1
+                    onclick="checkAnswer(1)">1</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id=answer2
+                    onclick="checkAnswer(2)">2</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id=answer3
+                    onclick="checkAnswer(3)">3</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id=answer4
+                    onclick="checkAnswer(4)">4</button>
+                <div id=multiple></div>
+
+            </div>
+            <div class="col" id="timer">
+                <div class="time"></div>
+            </div>
+        </div>
+    </div>
+<div id ="results">
+    <h2>Quiz is Done!</h2>
+    <h4>You Did Great</h4>
+    <h3>Type Your Name Below and Save Your Score</h3>
+      <form>
+        <div class="form-row justify-content-center">
+            <div class="col-auto my-1">
+                <input type="text" class="form-control" id="inlineFormInputName">
+            </div>
+            <div class="col-auto my-1">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><span id="score"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto my-1">
+                <button id="saveScore" type="submit" class="btn btn-dark">Save</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 list-group">
+                <ul id="listScore"></ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+    <script src=script.js> </script>
+
+</body>
+
+</html>
